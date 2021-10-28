@@ -73,7 +73,6 @@ for i in used_for:
         )
         ann_ids = coco_annotation.getAnnIds(imgIds=[img_id], iscrowd=None)
         print(f"Ann ids: {ann_ids}")
-
         # ann_ids.remove(143)
         # ann_ids.remove(144)
         # ann_ids.remove(145)

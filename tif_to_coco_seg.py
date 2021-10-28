@@ -52,7 +52,7 @@ def get_bbox(tif_file, tif_path, h, w):
                 p = Path(vertex) 
                 grid = p.contains_points(points)
                 mask = grid.reshape(h,w)
-                cv2.imwrite(f"mask_{roi.name}.png",mask*225)
+                # cv2.imwrite(f"mask_{roi.name}.png",mask*225)
 
                 mask = np.array(np.where(mask==True)).T
 
@@ -77,7 +77,7 @@ def get_bbox(tif_file, tif_path, h, w):
                         seg.append(y+top)
 
 
-                cv2.imwrite(f"mask_v2_{roi.name}.png",seg_mask*255)
+                # cv2.imwrite(f"mask_v2_{roi.name}.png",seg_mask*255)
 
                 seg_mask = seg_mask.tolist()
 
